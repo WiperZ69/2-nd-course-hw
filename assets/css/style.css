@@ -74,6 +74,9 @@ a {
   height: 400px;
   background-position: 63px 69px, 100% 0, calc(100% - 544px) calc(100% - 29px);
 }
+.top__back {
+  padding-top: 15px;
+}
 
 .about-games {
   background-color: #202027;
