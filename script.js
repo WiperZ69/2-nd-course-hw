@@ -171,3 +171,50 @@ function gameFour(){
     }
 }
 
+// 5
+function getRandomChoice() {
+    const choices = ["камень", "ножницы", "бумага"];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
+}
+const win = "Победа";
+const lose = "Поражение";
+const draw = "Ничья"
+function getWinner(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+        return draw;
+    } else if (
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+        return win;
+    } else {
+        return lose;
+    }
+}
+function gameFive() {
+    while (true) {
+        const userChoice = prompt("камень, ножницы или бумага");
+         if (userChoice === null) {
+            alert("Игра окончена. Спасибо за игру!");
+            break;
+        }
+        userChoice.toLowerCase();
+        if (!["камень", "ножницы", "бумага"].includes(userChoice)) {
+            alert("Похоже вы неверно ввели, Пожалуйста, напишите камень, ножницы или бумага.");
+            return;
+        }
+
+        const computerChoice = getRandomChoice();
+        if (getWinner(userChoice, computerChoice) == win) {
+            alert(`Ура! ${win}`);
+        } else if (getWinner(userChoice, computerChoice) == lose) {
+            alert(lose);
+        } else {
+            alert(draw);
+        }
+        
+    }
+    
+}
