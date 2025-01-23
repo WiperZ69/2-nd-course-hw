@@ -31,6 +31,20 @@
             font-weight: 600;
             line-height: 141.69%;
         }
+        &__stripAnimation {
+            animation: moveStrip 10s infinite linear;
+        }
+        &__animationText {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 25px;
+            padding-right: 25px;
+            font-size: 16px;
+        }
+        &__star {
+            width: 30px;
+            height: 30px;
+        }
     }
     .about-games {
         display: none;

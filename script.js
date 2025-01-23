@@ -218,3 +218,9 @@ function gameFive() {
     }
     
 }
+
+function gameSix() {
+    colorChange = `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+    const bgColor = document.querySelector('.mini-games')
+    if (bgColor) bgColor.style.backgroundColor = colorChange;
+}
