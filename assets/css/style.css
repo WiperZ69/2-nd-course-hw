@@ -443,6 +443,17 @@ a {
   .top__stripAnimation {
     animation: moveStrip 10s infinite linear;
   }
+  .top__animationText {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 16px;
+  }
+  .top__star {
+    width: 30px;
+    height: 30px;
+  }
   .about-games {
     display: none;
   }
